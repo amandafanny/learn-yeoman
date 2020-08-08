@@ -6,8 +6,9 @@ module.exports = class extends Generator {
     super(args, opts);
 
     // This makes `appname` a required argument.
-    // this.argument("appname", { type: String, required: true });
-    // this.log(this.options.appname);
+    this.argument("appname", { type: String, required: true });
+    this.argument("des", { type: String, required: false });
+    this.log(this.options);
     this.config.set('name', 'ghj')
 
     // Next, add your custom code
